@@ -1,0 +1,74 @@
+cd desktop
+cd ANPR_Camera
+conda activate license_detection
+streamlit run app.py  //change the file name  ie streamlit run upload.py ,streamlit run camera.py ,streamlit run live.py 
+
+
+
+
+To run your project using Anaconda with a Python version that minimizes compatibility issues and errors during package installation, follow these steps:
+
+### 1. Create a New Conda Environment
+
+First, create a new conda environment using a Python version that is known to be stable and widely supported by libraries like `av`. As of now, Python 3.9 or Python 3.10 are recommended:
+
+```bash
+conda create -n license_detection python=3.10
+```
+
+Replace `3.10` with `3.9` if you prefer Python 3.9. This command creates a new environment named `license_detection` with the specified Python version.
+
+### 2. Activate the Conda Environment
+
+Activate the newly created conda environment:
+
+```bash
+conda activate license_detection
+```
+
+### 3. Navigate to Your Project Directory
+
+Navigate to your project directory using the Anaconda Command Prompt:
+
+```bash
+cd path\to\your\project
+```
+
+Replace `path\to\your\project` with the actual path where your project files (`app.py`, `requirements.txt`, etc.) are located.
+
+### 4. Install Required Packages
+
+Ensure you have `pip` installed in your conda environment (though it usually comes pre-installed with Anaconda). Then, install the required packages listed in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run Your Project
+
+After installing the required packages, you can run your project using Streamlit:
+
+```bash
+streamlit run app.py
+```
+
+This command starts the Streamlit server and runs your `app.py` application, which should now execute within the activated conda environment.
+
+### Additional Tips
+
+- **Updating Packages**: Before creating the environment and installing packages, you can update conda itself and its packages to ensure you have the latest versions:
+
+  ```bash
+  conda update conda
+  conda update --all
+  ```
+
+- **Environment Deactivation**: To deactivate the conda environment when you're done working on your project, use:
+
+  ```bash
+  conda deactivate
+  ```
+
+- **Troubleshooting**: If you encounter issues during package installation or running the application, refer to the error messages for clues. Sometimes, specific versions of packages or additional system dependencies might be required.
+
+By following these steps, you should be able to set up and run your license plate detection project using Anaconda with a stable Python environment.
